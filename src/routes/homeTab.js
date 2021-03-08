@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '@uiw/react-native';
-import MyHome from '../pages/MyHome';
+import MyHome from '../pages/MyHome/indexs';
 import OrderHome from '../pages/OrderHome';
 import TransportHome from '../pages/TransportHome';
 
