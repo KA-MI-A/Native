@@ -5,15 +5,13 @@ import { Button } from '@uiw/react-native';
 class MyTester extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state = {};
   }
   onSubmit = () => {
-    this.props.userList()
+    this.props.userList();
   };
   render() {
-    const { formData } = this.props  //解构
-    const { aplle } = formData
+    const { formData } = this.props; //解构
     return (
       <SafeAreaView>
         <View>
@@ -24,14 +22,14 @@ class MyTester extends React.Component {
           textStyle={{ fontSize: 16, fontWeight: '200' }}
           bordered={false}
           color="#BFBFBF"
-          onPress={this.onSubmit}     //点击事件
+          onPress={this.onSubmit} //点击事件
         >
           测试按钮
-              </Button>
+        </Button>
         <FlatList
-          data={formData}  //属性
+          data={formData} //属性
           renderItem={({ item }) => {
-            return <Text style={styles.item}>{item.courierName}</Text> //遍历数组
+            return <Text style={styles.item}>{item.courierName}</Text>; //遍历数组
           }}
         />
       </SafeAreaView>
@@ -55,12 +53,12 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    paddingTop: 22
+    paddingTop: 22,
   },
   item: {
     padding: 10,
     fontSize: 18,
     height: 44,
-    backgroundColor:'pink'
+    backgroundColor: 'pink',
   },
 });

@@ -6,15 +6,17 @@ export default class MyScreen extends Component {
   render() {
     const { navigation } = this.props;
     return (
-      <SafeAreaView style={{flex:1}}>
-        <View style={{flex:1}}>
+      <SafeAreaView style={{ flex: 1 }}>
+        <View style={{ flex: 1 }}>
           <List
             flat={true}
             data={[
-              { title: '企业开票', onPress: () => navigation.navigate('MyHomeBilling')  },
+              { title: '企业开票', onPress: () => navigation.navigate('MyHomeBilling') },
               { title: '我的熟车' },
-              { title: '设置', onPress: () => navigation.navigate('MyHomeSetting')  },
-              { title: '测试界面', onPress: () => navigation.navigate('MyTester')  },
+              { title: '设置', onPress: () => navigation.navigate('MyHomeSetting') },
+              { title: '测试界面', onPress: () => navigation.navigate('MyTester') },
+              { title: '首页', onPress: () => navigation.navigate('TransportHome') },
+              { title: '进入首页', onPress: () => navigation.navigate(' MyBook') },
               { title: '退出登录', onPress: () => navigation.replace('SignIn') },
             ]}
             renderItem={({ item, index }) => {
@@ -24,14 +26,14 @@ export default class MyScreen extends Component {
                   extra={<Icon name="right" fill="#abb0b5" size={14} />}
                   size="large"
                   paddingLeft={15}
-                  style={{ borderBottomWidth: 0, }}
+                  style={{ borderBottomWidth: 0 }}
                   onPress={item.onPress || null}
                 >
                   <View>
                     <Text>{item.title}</Text>
                   </View>
                 </List.Item>
-              )
+              );
             }}
           />
         </View>
